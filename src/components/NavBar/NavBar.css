@@ -1,0 +1,51 @@
+.menu-navbar-container{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8f6d45;
+    height: 90px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.menu-title{
+    margin-left: 10px;
+    color: #212529;
+    font-size: 35px;
+    margin: 0;
+    padding: 8px;
+}
+
+.menu-items{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 150px;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    text-decoration: none;
+    color: #212529;
+    font-size: 20px;
+    font-size: 16px;
+}
+
+/* Buscador NavBar */
+.form-control-nav {
+    height: 35px;
+    border-radius: 5px;
+    border: 3px solid #b49b7f
+    
+}
+
+/* Boton buscar NavBar */
+.btn-outline-success {
+    height: 35px;
+    color: #212529;
+    border-color: #b49b7f;
+    border-radius: 5px;
+}
