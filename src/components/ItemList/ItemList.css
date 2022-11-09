@@ -1,0 +1,7 @@
+/* CONTENEDOR CARTS CON PRODUCTOS */
+.container-carts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}

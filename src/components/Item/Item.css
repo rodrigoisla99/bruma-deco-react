@@ -1,0 +1,19 @@
+/* CARTS CON PRODUCTOS */
+.products-carts {
+    justify-content: center;
+    border: 1px solid red;
+    text-align: center;
+    margin: 0px 20px 20px;
+}
+
+/* BOTON AÑADIR AL CARRITO */
+.add-cart{
+    font-weight: bold;
+    padding: 5px;
+    display: flex;
+    border-radius: 5px;
+    border-color: #8f6d45;
+    margin-left: 20px;
+    color: #8f6d45;
+    justify-content: center;
+}
