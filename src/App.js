@@ -3,7 +3,9 @@ import NavBar from './components/NavBar/NavBar';
 import Banner from './components/Banner/Banner';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+// import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 
 function App() {
@@ -11,28 +13,16 @@ function App() {
     <>
     <BrowserRouter>
       <NavBar/>
-      <Banner name="Armá tu espacio, decorá tu vida"/>
-      <hr/>
       <Routes>
       <Route path='/' element={<ItemListContainer/>}></Route>
       <Route path='/category/:categoryName' element={<ItemListContainer/>}></Route>
       <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+      <Route path='/category/:categoryName/item/:id' element={<ItemDetailContainer />} />
+      {/* <Route path='/item/:id' element={<Contact/>}/> */}
       </Routes>
       <hr/>
-      {/* <ItemDetailContainer/> */}
       <Footer></Footer>
     </BrowserRouter>
-
-
-
-
-      
-      {/* <Banner name="Armá tu espacio, decorá tu vida"/>
-      <hr/>
-      <ItemListContainer />
-      <hr/>
-      <ItemDetailContainer/>
-      <Footer></Footer> */}
     </>
   );
 }

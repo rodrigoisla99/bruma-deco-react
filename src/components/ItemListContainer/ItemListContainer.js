@@ -46,6 +46,7 @@ import { useEffect, useState } from "react";
 import {data} from "../../data/data";
 import Item from "../Item/Item";
 import ItemList from "../ItemList/ItemList";
+import Banner from "../Banner/Banner";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
@@ -73,7 +74,13 @@ const getProducts = new Promise ((resolve, reject)=> {
         }, 3000); 
 }, [categoryName]);
 
-    return <div><ItemList productList={productList}/></div>
+    return (
+        <>
+        { !categoryName && <Banner name="Armá tu espacio, decorá tu vida"/> }
+        <hr/>
+        <div><ItemList productList={productList}/></div>
+        </>
+        )
 };
 
 export default ItemListContainer;
