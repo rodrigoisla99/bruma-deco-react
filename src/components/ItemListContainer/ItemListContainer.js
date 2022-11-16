@@ -46,14 +46,23 @@ import { useEffect, useState } from "react";
 import {data} from "../../data/data";
 import Item from "../Item/Item";
 import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
     const [productList, setProductList] = useState([]);
+    const {categoryName} = useParams();
     
 const getProducts = new Promise ((resolve, reject)=> {
     setTimeout(() => {
-        resolve(data)
-    }, 3000);
+        if (categoryName) {
+            const filteredData = data.filter((producto) => {
+                return producto.category === categoryName
+            });
+            resolve(filteredData)
+        } else {
+            resolve(data)
+        }
+    }, 2000);
 });
 
     useEffect(()=> {
@@ -61,9 +70,8 @@ const getProducts = new Promise ((resolve, reject)=> {
             setProductList(respuesta)
         });
         setTimeout(() => {
-            console.log(productList);
-        }, 4000); 
-}, [productList]);
+        }, 3000); 
+}, [categoryName]);
 
     return <div><ItemList productList={productList}/></div>
 };

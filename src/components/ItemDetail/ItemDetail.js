@@ -1,8 +1,8 @@
-const ItemDetail = ({product}) => {
+const ItemDetail = ({productSelected}) => {
     return (
 <div>
-    <h1>{product.nombre}</h1>
-    <h1>{product.precio}</h1>
+    <h1>{productSelected.nombre}</h1>
+    <h2>{productSelected.precio}</h2>
 </div>
     )
 }
