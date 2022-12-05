@@ -1,5 +1,18 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-color: #b49b7f;
+  font-family: 'Roboto Slab', serif;
+}
+
 .App {
   text-align: center;
+  
 }
 
 .App-logo {

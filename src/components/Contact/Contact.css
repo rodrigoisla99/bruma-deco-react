@@ -1,0 +1,107 @@
+/* Formulario de contacto */
+.form-contact {
+    margin: auto;
+    padding: 10px;
+    width: 80%;
+    background-color: #8f6d45;
+    border-radius: 5px;
+}
+
+/* Casilleros en blanco para completar del formulario */
+.form-control {
+    border-radius: 5px;
+    border: 3px solid #b49b7f;
+    outline: none;
+}
+
+/* Focus del casilleros en blanco para completar del formulario */
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #b49b7f;
+    outline: 0;
+    box-shadow: 0 0 0 0.10rem rgb(255, 255, 255);
+}
+
+/* Boton enviar formulario de contacto */
+.send-contact {
+    margin: auto;
+    width: 60%;
+    border-radius: 5px;
+    border-color: #b49b7f;
+    text-align: center;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+}
+
+/* Hover boton enviar formulario de contacto */
+.send-contact:hover{
+        color: #fff;
+        background-color: #b49b7f;
+        border-color: #b49b7f;
+}
+
+/* Div que contiene al boton de enviar contacto - Usado para centar el boton */
+.enviar-contacto {
+    text-align: center;
+}
+
+/* Preguntas frecuentes */
+.accordion {
+    width: 80%;
+    margin: auto;
+}
+
+/* Menú desplegable de preguntas frecuentes */
+.accordion-button {
+    color: #212529;
+    background-color: #8f6d45;
+}
+
+/* Focus del menú desplegable de preguntas frecuentes */
+.accordion-button:focus {
+    border-color: gray;
+    outline: 0;
+    box-shadow: 0 0 0 0.20rem wheat;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #212529;
+    background-color: #8f6d45;
+}
+
+/* Boton para desplegar el menú de preguntas frecuentes */
+.accordion-button:not(.collapsed)::after {
+    background-image: none;
+    transform: rotate(-180deg);
+}
+
+/* TABLET */
+@media screen and (min-width: 768px){
+/* Boton enviar formulario de contacto */
+.send-contact {
+    width: 30%;
+}
+}
+
+/* LAPTOP */
+@media screen and (min-width: 1024px) {
+/* Formulario de contacto */
+
+
+.form-contact {
+    width: 60%;
+}  
+
+/* Boton enviar formulario de contacto */
+.send-contact {
+    width: 20%;
+}
+
+/* Preguntas frecuentes */
+.accordion {
+    width: 60%;
+}
+}
+

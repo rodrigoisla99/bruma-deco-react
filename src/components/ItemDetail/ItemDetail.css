@@ -3,5 +3,22 @@
     justify-content: center;
     border: 1px solid #8f6d45;
     text-align: center;
-    margin: 0px 20px 20px;
+    margin: 20px 20px 20px;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.img-detail {
+    border-radius: 5px;
+    margin-top: 10px;
 }

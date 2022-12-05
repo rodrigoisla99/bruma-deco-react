@@ -1,0 +1,93 @@
+.newsletter {
+  margin: auto;
+  padding: 3px;
+  width: max-content;
+  max-width: 500px;
+  background-color: #8f6d45;
+  border-radius: 5px;
+}
+
+/* Titulo del newsletter */
+.newsletter h3 {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+/* Casillero de nombre y correo en newsletter */
+.nombre-newsletter,
+.correo-newsletter {
+  width: 100%;
+  font-size: 12px;
+  width: auto;
+  font-size: 10px;
+  padding-left: 2px;
+  border-radius: 5px;
+  border-color: #b49b7f;
+}
+
+/* Focus de nombre en newsletter */
+.nombre-newsletter:focus{
+    color: #212529;
+    background-color: #fff;
+    border-color: #b49b7f;
+    outline: 0;
+    box-shadow: 0 0 0 0.10rem rgb(255, 255, 255);
+}
+
+/* Focus de nombre en newsletter */
+.correo-newsletter:focus{
+    color: #212529;
+    background-color: #fff;
+    border-color: #b49b7f;
+    outline: 0;
+    box-shadow: 0 0 0 0.10rem rgb(255, 255, 255);
+}
+
+/* Boton enviar newsletter */
+.enviar {
+  margin: auto;
+  width: 80%;
+  border-radius: 5px;
+  border-color: #b49b7f;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+/* Items */
+.items {
+  display: grid;
+  text-align: center;
+  place-content: center;
+  justify-content: center;
+}
+.items ul {
+  list-style-type: none;
+  padding: 0;
+}
+.items a {
+  color: #212529;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+  
+}
+
+/* LAPTOP */
+@media screen and (min-width: 1024px) {
+  .enviar {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+
+  .items {
+    display: grid;
+    text-align: center;
+    place-content: center;
+    justify-content: center;
+  }
+}

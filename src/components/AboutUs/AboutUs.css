@@ -1,0 +1,25 @@
+/* Titulo "Quienes somos" */
+h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Descripcion de quienes somos con imagen de fondo */
+.quienes-somos{
+    font-size: 15px;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-image: url(../../assets/fondo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 1024px) {
+.quienes-somos {
+    font-size: 35px;
+  }
+    }

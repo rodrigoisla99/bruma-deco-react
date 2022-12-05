@@ -1,44 +1,45 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
-import { Link, NavLink } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import "bootstrap/dist/css/bootstrap.min.css";
 import './NavBar.css'
 
 const NavBar = () => {
     return (
-        <div className="menu-navbar-container">
-            <h1 className="menu-title">Bruma Deco</h1>
-            <ul className="menu-items">
-                <li>
-                    <NavLink className={"menu-list"} to="/">Inicio</NavLink>
-                </li>
-                {/* <li>
-                    <a href="" className="menu-list">Tienda</a>
-                    <Link to="/">Tienda</Link>
-                </li> */}
-                <li>
-                    <NavLink className={"menu-list"} to="/category/paraCasa">Para casa</NavLink>
-                </li>
-                <li>
-                    <NavLink className={"menu-list"} to="/category/textil">Textil</NavLink>
-                </li>
-                <li>
-                    {/* <a href="" className="menu-list">¿Quienes somos?</a> */}
-                    <NavLink className={"menu-list"} to="/aboutUs">¿Quienes somos?</NavLink>
-                </li>
-                <li>
-                    {/* <a href="../Contacto/Contacto.js" className="menu-list">Contacto</a> */}
-                    <NavLink className={"menu-list"} to="/contact">Contacto</NavLink>
-                </li>
-                <li>
-                    {/* Logo carrito - VER COMO HACER QUE SEA CLICKEABLE */ }
-                    <NavLink className={"menu-list"} to="/cart"><CartWidget></CartWidget></NavLink>
-                </li>
-            </ul>
-
-            {/* Buscador y boton buscar */}
-            <input class="form-control-nav me-3" type="search" placeholder="Buscar" aria-label="Search"></input>
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </div> 
+    <Navbar expand="lg">
+      <Container fluid>
+        <Navbar.Brand href="/"><strong>Bruma Deco</strong></Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+          >
+            <Nav.Link href="/">Inicio</Nav.Link>
+            <Nav.Link href="/category/paraCasa">Para Casa</Nav.Link>
+            <Nav.Link href="/category/textil">Textil</Nav.Link>
+            <Nav.Link href="/aboutUs">¿Quiénes somos?</Nav.Link>
+            <Nav.Link href="/contact">Contacto</Nav.Link>
+            <Nav.Link href="/cart"><CartWidget></CartWidget></Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Buscar"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Buscar</Button>
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
     )
 };
 

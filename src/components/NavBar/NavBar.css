@@ -1,37 +1,18 @@
-.menu-navbar-container{
-    display: flex;
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: space-between;
+/* Fondo del navbar */
+.navbar {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
     background-color: #8f6d45;
-    height: 90px;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
-.menu-title{
-    margin-left: 10px;
+/* Item del menú */
+.nav-link {
     color: #212529;
-    font-size: 35px;
-    margin: 0;
-    padding: 8px;
 }
 
-.menu-items{
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    padding-left: 150px;
-}
-
-.menu-list {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px;
-    text-decoration: none;
-    color: #212529;
-    font-size: 20px;
-    font-size: 16px;
+/* Mueve los items del menú hacia la derecha */
+.navbar-collapse {
+    flex-grow: 0;
 }
 
 /* Buscador NavBar */
@@ -44,8 +25,14 @@
 
 /* Boton buscar NavBar */
 .btn-outline-success {
-    height: 35px;
     color: #212529;
     border-color: #b49b7f;
     border-radius: 5px;
+}
+
+/* Hover del boton buscar NavBar */
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #b49b7f;
+    border-color: #b49b7f;
 }

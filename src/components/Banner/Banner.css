@@ -1,25 +1,6 @@
-
-
-/* TABLET */
-@media screen and (min-width: 768px) {
-    .message {
-        text-align: center;
-        color: #212529;
-        width: 80%;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        top: 45%;
-        font-size: 40px;
-    }
-}
-
-/* LAPTOP */
-@media screen and (min-width: 1024px) {
-/* Banner central de la página */
+/* Imagen de fondo del banner */
 .banner {
     width: 100%;
-    height: 100%;
 }
 
 /* Slogan "Armá tu espacio, decorá tu vida" */
@@ -28,9 +9,32 @@
     color: #212529;
     width: 80%;
     position: absolute;
-    top: 70%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    top: 65%;
+    font-size: 30px;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+    /* Slogan "Armá tu espacio, decorá tu vida" */
+.message {
+    top: 70%;
+    font-size: 60px;
+}
+}
+
+/* LAPTOP */
+@media screen and (min-width: 1024px) {
+/* Imagen de fondo del banner */
+.banner {
+    width: 100%;
+    height: 100%;
+}
+
+/* Slogan "Armá tu espacio, decorá tu vida" */
+.message {
+    top: 60%;
     font-size: 100px;
 }
 }

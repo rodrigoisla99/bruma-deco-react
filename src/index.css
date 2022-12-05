@@ -10,13 +10,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/* Lines HR - Lines divisoras */
-hr{
-  height: 1px;
-  margin: 0.5rem 0;
-  color: inherit;
-  background-color: currentColor;
-  border: 0;
-  opacity: .25;
-}
