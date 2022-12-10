@@ -13,16 +13,4 @@ const ItemList = ({productList}) => {
     );
 };
 
-// const ItemList = ({setItems}) => {
-//     return (
-//         //    ACA DEBERIA PONERLE EL DISPLAY FLEX - VER MINUTO 59 DEL AFTER
-//         <div className="container-carts">
-//             {setItems.map((items) => (
-//             <Item key={items.id} producto={items} />
-//          ))} 
-//         </div>
-       
-//     );
-// };
-
 export default ItemList;

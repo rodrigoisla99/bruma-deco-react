@@ -1,3 +1,14 @@
+#  Bruma Deco
+## E-commerce del emprendimiento de decoración de Bruma Deco
+
+
+E-commerce de la tienda Bruma Deco. En el mismo se venden productos de decoracion para cualquier tipo de ambiente. Cuenta con un stock limitado de productos al tratarse de un emprendimiento que recien comienza. Para llevarlo a cabo se utilizó:
+
+- React-JS
+- Firebase
+- Bootstrap
+- Sweet Alert
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

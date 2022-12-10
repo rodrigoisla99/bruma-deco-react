@@ -6,17 +6,30 @@
     margin: 0px 20px 20px;
 }
 
+/* Subrayado de las carts con productos */
+.subrayado {
+    text-decoration: none;
+}
+
+/* Imagenes de las carts con los productos */
 .image-cart {
     border-radius: 5px;
 }
 
+/* Nombre y precio de las carts con los productos */
 .name-cart, .price-cart {
     font-size: 20px;
     color: #212529;
     text-decoration: none;
 }
 
-/* BOTON AÑADIR AL CARRITO */
+/* Stock */
+.stock {
+    font-size: 15px;
+    color: #212529;
+}
+
+/* Botón ver detalle */
 .add-cart{
     font-weight: bold;
     padding: 5px;

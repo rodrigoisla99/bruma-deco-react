@@ -1,0 +1,91 @@
+.products-cart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid;
+    margin: 10px;
+}
+
+.image-cart-table {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.table-bordered{
+    text-align: center;
+}
+
+/* Botón vaciar carrito */
+.clear-cart {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 13px;
+}
+
+/* Formualario para finalizar la compra */
+.form-compra {
+    text-align: center;
+    background-color: #8f6d45;
+    border-radius: 5px;
+    background-color: #8f6d45;
+    width: 90%;
+    margin: auto;
+    padding: 5px;
+}
+
+/* Inputs del dormulario para finalziar compra */
+.input-compra {
+    padding-left: 2px;
+    border-radius: 5px;
+    border-color: #b49b7f;
+    margin: 5px 10px;
+    height: 30%;
+}
+
+/* Titulo completa tus datos para completar la compra */
+.datos-form {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.total {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* Boton de finalizar compra */
+.finalizar-compra{
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+
+.probando {
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    }
+
+    /* Formualario para finalizar la compra */
+.form-compra {
+    margin-top: 15px;
+    width: 70%;
+    }
+
+/* Titulo completa tus datos para completar la compra */
+.datos-form {
+    font-size: 20px;
+    }
+
+    .clear-cart {
+        margin-bottom: 0px;
+    }
+
+.total{
+    font-size: 23px;
+    margin-top: 15px;
+}
+}

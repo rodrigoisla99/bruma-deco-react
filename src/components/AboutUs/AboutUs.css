@@ -1,6 +1,6 @@
 /* Titulo "Quienes somos" */
 h1{
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -18,8 +18,34 @@ h1{
     background-position: center;
 }
 
+.row {
+    text-align: justify;
+}
+
+h3{
+    text-align: center;
+}
+
+@media screen and (min-width: 768px){
+    .col-md-8 {
+        align-self: center;
+    }
+
+    h3{
+        text-align: initial;
+    }
+}
+
 @media screen and (min-width: 1024px) {
+h1{
+    font-size: 30px;
+}
+
 .quienes-somos {
     font-size: 35px;
-  }
-    }
+}
+
+.row {
+    text-align: justify;
+}
+}

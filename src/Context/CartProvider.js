@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import swal from "sweetalert"
 
 export const cartContext = createContext ([]);
 
@@ -7,7 +8,11 @@ const CartProvider = ({children}) => {
 
     const addToCart = (product, quantity) => {
         if(isInCart(product.id)){
-            alert("el producto ya se encuentra en el carrito")
+            swal({
+                title: "Este producto ya se encuentra en el carrito",
+                icon: "info",
+                button: "Aceptar"
+            })
         }else {
             setCart([...cart, {...product, quantity}])
         }
@@ -24,7 +29,7 @@ const CartProvider = ({children}) => {
     };
 
     return (
-            <cartContext.Provider value={{cart, addToCart}}>
+            <cartContext.Provider value={{cart, addToCart, clear}}>
                 {children}
             </cartContext.Provider>
     )

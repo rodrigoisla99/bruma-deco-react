@@ -1,7 +1,11 @@
 import { useContext, useState, useEffect } from "react";
 import { cartContext } from "../../Context/CartProvider";
 import { collection, addDoc, getFirestore, doc, updateDoc  } from "firebase/firestore";
+import "./Cart.css"
 import moment from "moment";
+import swal from "sweetalert"
+import Table from 'react-bootstrap/Table';
+
 
 const Cart = () => {
     const {cart} = useContext(cartContext);
@@ -31,7 +35,14 @@ const Cart = () => {
         };
         addDoc(query,newOrder)
         .then((response)=> {
-            alert(`Orden creada con el id ${response.id}`)
+            swal(
+                {
+                    title: `Orden creada con el id ${response.id}`,
+                    text: "Te enviaremos un mail con el detalle",
+                    icon: "success",
+                    button: "Aceptar"
+                }
+                )
             return(response)
         })
         .then((res) => {
@@ -57,24 +68,49 @@ const Cart = () => {
         })
     }
 
+    const {clear} = useContext(cartContext)
+
     return (
     <div>
+        <hr/>
         {cart.map((product) => (
-            <div key={product.id}>
-                <img className="image-cart" alt={product.title} src={`/assets/${product.imageId}`}/>
-                <h2 className="name-cart">{product.title}</h2>
-                <h2 className="price-cart">{product.price}</h2> 
-                <h2>{product.quantity}</h2>
-            </div>
+            <Table striped bordered hover className="probando">
+      <thead>
+        <tr>
+          <th>Cant</th>
+          <th>Imagen</th>
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{product.quantity} </td>
+          <td><img className="image-cart-table" alt={product.title} src={`/assets/${product.imageId}`}/></td>
+          <td>{product.title}</td>
+          <td>${product.price}</td>
+        </tr>
+      </tbody>
+    </Table>
         ))}
+
         <div>
-            <h1>Total: {total}</h1>
-            <button onClick={createOrder}>Finalizar compra</button>
-            <div>
-                <h2>Formulario</h2>
-                <input name="name" type="text" placeholder="Nombre" value={formValues.name} onChange={handleInputChange}></input>
-                <input name="phone" type="text" placeholder="Telefono" value={formValues.phone} onChange={handleInputChange}></input>
-                <input name="email" type="text" placeholder="Email" value={formValues.email} onChange={handleInputChange}></input>
+
+            <div className="clear-cart">
+                <button onClick={clear} className="add-cart">Vaciar Carrito</button>
+            </div>
+        
+            <div className="form-compra">
+                <h2 className="datos-form">Completá tus datos para finalizar la compra</h2>
+                <input className="input-compra" name="name" type="text" placeholder="Nombre" value={formValues.name} onChange={handleInputChange}></input>
+                <input className="input-compra" name="phone" type="text" placeholder="Teléfono" value={formValues.phone} onChange={handleInputChange}></input>
+                <input className="input-compra" name="email" type="text" placeholder="Email" value={formValues.email} onChange={handleInputChange}></input>
+            </div>
+
+            <h1 className="total">Total: ${total}</h1>
+            
+            <div className="finalizar-compra">
+                <button onClick={createOrder} className="add-cart">Finalizar compra</button>
             </div>
         </div>
     </div>) 

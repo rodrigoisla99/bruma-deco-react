@@ -72,6 +72,15 @@
   text-decoration: none;
 }
 
+.redes-sociales {
+  text-align: center;
+  padding: 20px;
+}
+
+.red-facebook{
+  padding: 0 20px;
+}
+
 /* TABLET */
 @media screen and (min-width: 768px) {
   
@@ -90,4 +99,8 @@
     place-content: center;
     justify-content: center;
   }
+
+  /* .redes-sociales{
+  margin-left: 150px;
+  } */
 }

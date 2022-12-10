@@ -9,7 +9,6 @@ import {getFirestore, collection, getDocs, query, where} from "firebase/firestor
 
 const ItemListContainer = () => {
     const [productList, setProductList] = useState([]);
-    // const [items, setItems] = useState([])
     const {categoryName} = useParams();
 
 // USANDO FIREBASE
@@ -40,7 +39,7 @@ useEffect(()=> {
     return (
         <>
         {/* HAGO QUE EL BANNER SE MUESTRE SOLO EN EL INICIO */}
-        { !categoryName && <Banner name="Armá tu espacio, decorá tu vida"/> }
+        { !categoryName && <Banner/> }
         <hr/>
         <div><ItemList productList={productList}/></div>
         </>

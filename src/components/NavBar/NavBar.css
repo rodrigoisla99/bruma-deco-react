@@ -1,3 +1,8 @@
+/* Nombre de la pagina web */
+.nameApp{
+    color: #212529;
+}
+
 /* Fondo del navbar */
 .navbar {
     padding-top: 0.3rem;
@@ -36,3 +41,10 @@
     background-color: #b49b7f;
     border-color: #b49b7f;
 }
+
+@media screen and (min-width: 1024px) {
+    .nameApp{
+    font-size: 25px;
+}
+}
+

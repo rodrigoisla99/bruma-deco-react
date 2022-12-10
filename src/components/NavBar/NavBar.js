@@ -3,6 +3,7 @@ import CartWidget from "../CartWidget/CartWidget";
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
+import { NavLink } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -13,7 +14,7 @@ const NavBar = () => {
     return (
     <Navbar expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/"><strong>Bruma Deco</strong></Navbar.Brand>
+        <Navbar.Brand as={NavLink} to="/"><strong className="nameApp">Bruma Deco</strong></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -21,12 +22,12 @@ const NavBar = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/">Inicio</Nav.Link>
-            <Nav.Link href="/category/paraCasa">Para Casa</Nav.Link>
-            <Nav.Link href="/category/textil">Textil</Nav.Link>
-            <Nav.Link href="/aboutUs">¿Quiénes somos?</Nav.Link>
-            <Nav.Link href="/contact">Contacto</Nav.Link>
-            <Nav.Link href="/cart"><CartWidget></CartWidget></Nav.Link>
+            <Nav.Link as={NavLink} to="/">Inicio</Nav.Link>
+            <Nav.Link as={NavLink} to="/category/paraCasa">Para Casa</Nav.Link>
+            <Nav.Link as={NavLink} to="/category/textil">Textil</Nav.Link>
+            <Nav.Link as={NavLink} to="/aboutUs">¿Quiénes somos?</Nav.Link>
+            <Nav.Link as={NavLink} to="/contact">Contacto</Nav.Link>
+            <Nav.Link as={NavLink} to="/cart"><CartWidget></CartWidget></Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

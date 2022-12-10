@@ -77,6 +77,11 @@
     transform: rotate(-180deg);
 }
 
+/* Texto de las preguntas frecuentes */
+.accordion-body {
+    text-align: justify;
+}
+
 /* TABLET */
 @media screen and (min-width: 768px){
 /* Boton enviar formulario de contacto */
