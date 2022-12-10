@@ -9,6 +9,10 @@ E-commerce de la tienda Bruma Deco. En el mismo se venden productos de decoracio
 - Bootstrap
 - Sweet Alert
 
+
+
+https://user-images.githubusercontent.com/104464736/206857205-b05c7795-42b2-46c9-bfc5-a23571f7dd1d.mp4
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
